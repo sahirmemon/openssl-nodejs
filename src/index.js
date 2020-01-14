@@ -50,9 +50,6 @@ module.exports = function openssl(params, callback = () => undefined) {
     for (let i = 0; i <= parameters.length - 1; i++) {
         
         if (checkBufferObject(parameters[i])) {
-            if (!fs.existsSync(dir)) {
-                fs.mkdirSync(dir);
-            }
 
             const filename = dir + parameters[i].name
 
